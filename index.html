@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 onclick="console.log('heading tag')">Dom er special event</h1>
+    <button onclick="console.log('love is here')">click me</button>
+    <button onclick="console.log('loss is here')">another button</button>
+    <br> <br>
+
+    <button onclick="document.body.style.backgroundColor='tomato'">tomato</button>
+    <button onclick="document.body.style.backgroundColor='red'">brown
+    </button>
+    <button onclick="document.body.style.backgroundColor='salmon'">salmon</button>
+    <button onclick="document.body.style.backgroundColor='navy'">navy
+    </button>
+    <button onclick="document.body.style.backgroundColor='blue'">blue</button>
+    <button onclick="document.body.style.backgroundColor='green'">green</button>
+    <button onclick="document.body.style.backgroundColor='pink'">pink</button>
+    <button onclick="document.body.style.backgroundColor='lightgray'">lightgray</button>
+
+
+    <br>
+    <button onclick="Yellow()">Yellow</button>
+
+    <br>
+
+    <button id="white">white</button>
+
+    <button id="purple">purple</button>
+
+    <button id="brown">brown</button>
+
+    <button id="black">black</button>
+    <button id="magenta">magenta</button>
+
+    <button id="lime">lime</button>
+
+    <script src="event.js"></script>
+
+    <script>
+
+        //// option 3
+
+        const purple = document.getElementById('purple');
+        purple.onclick = function purple() {
+            document.body.style.backgroundColor = 'purple';
+        }
+
+
+        /// option 4
+
+        const brown1 = document.getElementById('brown');
+        brown1.addEventListener('click', brown2);
+
+        function brown2() {
+            document.body.style.backgroundColor = 'brown';
+        }
+
+        /// other system option 4
+
+        const black = document.getElementById('black');
+        black.addEventListener('click', function black() {
+            document.body.style.backgroundColor = 'black';
+        })
+
+
+        /// other system option 5
+
+        document.getElementById('magenta').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'magenta';
+        })
+
+
+        document.getElementById('lime').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lime';
+        })
+
+
+
+    </script>
+</body>
+
+</html>

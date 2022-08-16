@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom summary</title>
+</head>
+
+<body>
+
+
+
+    <h1>Final DoM event handler</h1>
+    <h3 id="handler">Default Text</h3>
+    <button onclick="handleOnclick()">Nadim</button>
+
+    <button id="change">Nobin</button>
+
+
+
+    <p id="display"> welcome</p>
+
+    <input id="field" type="text">
+
+    <button id="action">update</button>
+
+    <script>
+
+        /// 1st method
+
+        function handleOnclick() {
+            const handle = document.getElementById('handler');
+            handle.innerText = 'Add Event handle';
+
+        }
+
+        //// 2nd method
+
+        document.getElementById('change').addEventListener('click', function () {
+            const handle = document.getElementById('handler');
+            handle.innerHTML = 'Add Evenlistener';
+        })
+
+        /// 2nd method recap
+        document.getElementById('action').addEventListener('click', function () {
+
+            const textField = document.getElementById('field');
+            const ShowText = textField.value;
+
+
+            const show = document.getElementById('display');
+            show.innerText = ShowText;
+
+            textField.value = '';
+
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
